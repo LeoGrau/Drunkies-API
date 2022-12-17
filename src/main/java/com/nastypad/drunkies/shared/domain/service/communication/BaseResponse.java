@@ -1,13 +1,13 @@
-package com.nastypad.drunkies.shared.domain.services.communication;
+package com.nastypad.drunkies.shared.domain.service.communication;
 
 import lombok.Getter;
 import org.apache.logging.log4j.util.Strings;
 
 @Getter
 public class BaseResponse<T> {
-    private boolean success;
-    private String message;
-    private T resource;
+    private final boolean success;
+    private final String message;
+    private final T resource;
 
     public BaseResponse(String message) {
         this.success = false;

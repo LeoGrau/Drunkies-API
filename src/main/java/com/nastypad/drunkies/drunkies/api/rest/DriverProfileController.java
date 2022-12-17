@@ -24,4 +24,6 @@ public class DriverProfileController {
     public Page<DriverProfileResource> getAllDriverProfileResource(Pageable pageable) {
         return driverProfileMapper.toListPageResource(driverProfileService.getAll(), pageable);
     }
+
+    //@GetMapping("{id}")
 }
