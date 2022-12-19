@@ -1,5 +1,6 @@
 package com.nastypad.drunkies.drunkies.mapping;
 
+import com.nastypad.drunkies.drunkies.mapping.mappers.DriveCriteriaMapper;
 import com.nastypad.drunkies.drunkies.mapping.mappers.DriveSkillMapper;
 import com.nastypad.drunkies.drunkies.mapping.mappers.DriverProfileMapper;
 import org.springframework.context.annotation.Bean;
@@ -15,5 +16,8 @@ public class MappingConfiguration {
 
     @Bean
     public DriveSkillMapper driveSkillMapper() { return new DriveSkillMapper(); }
+
+    @Bean
+    public DriveCriteriaMapper driveCriteriaMapper() { return new DriveCriteriaMapper();  }
 
 }

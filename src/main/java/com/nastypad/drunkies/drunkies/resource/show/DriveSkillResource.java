@@ -8,6 +8,7 @@ import lombok.*;
 @With
 @AllArgsConstructor
 public class DriveSkillResource {
+    //private Long driveCriteriaId;
     private Long driveSkillId;
     private String driveSkillName;
 }

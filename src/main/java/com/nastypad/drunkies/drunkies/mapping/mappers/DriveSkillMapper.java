@@ -1,6 +1,7 @@
 package com.nastypad.drunkies.drunkies.mapping.mappers;
 
 import com.nastypad.drunkies.drunkies.domain.model.entity.DriveSkill;
+import com.nastypad.drunkies.drunkies.resource.create.CreateDriveSkillResource;
 import com.nastypad.drunkies.drunkies.resource.show.DriveSkillResource;
 import com.nastypad.drunkies.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,9 @@ public class DriveSkillMapper implements Serializable {
 
     public Page<DriveSkillResource> toListPageResource(List<DriveSkill> driveSkillModels, Pageable pageable) {
         return new PageImpl<>(enhancedModelMapper.mapList(driveSkillModels, DriveSkillResource.class), pageable, driveSkillModels.size());
+    }
+
+    public DriveSkill toModel(CreateDriveSkillResource driveSkillResource) {
+        return enhancedModelMapper.map(driveSkillResource, DriveSkill.class);
     }
 }

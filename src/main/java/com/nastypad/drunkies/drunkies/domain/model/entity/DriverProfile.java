@@ -1,10 +1,10 @@
 package com.nastypad.drunkies.drunkies.domain.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
 @Table(name = "driver_profiles")
@@ -15,6 +15,7 @@ public class DriverProfile {
     Long driverId;
     String driverName;
     String photoUrl;
+
 
     public DriverProfile() {
 

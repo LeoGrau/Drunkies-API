@@ -7,4 +7,5 @@ import java.util.List;
 public interface DriveSkillService {
     List<DriveSkill> getAll();
     DriveSkill getByDriveSkillId(Long driveSkillId);
+    DriveSkill create(DriveSkill driveSkill);
 }

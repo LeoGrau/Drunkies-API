@@ -9,6 +9,8 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 
 import java.io.Serializable;
+import java.sql.Driver;
+import java.util.Collection;
 import java.util.List;
 
 public class DriverProfileMapper implements Serializable {
@@ -22,6 +24,10 @@ public class DriverProfileMapper implements Serializable {
 
     public Page<DriverProfileResource> toListPageResource(List<DriverProfile> driveProfilesModel, Pageable pageable) {
         return new PageImpl<>(enhancedModelMapper.mapList(driveProfilesModel, DriverProfileResource.class), pageable, driveProfilesModel.size());
+    }
+
+    public Collection<DriverProfileResource> toListCollectionResource(List<DriverProfile> driveProfilesModel) {
+        return enhancedModelMapper.mapList(driveProfilesModel, DriverProfileResource.class);
     }
 
 }
